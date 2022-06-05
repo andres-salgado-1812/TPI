@@ -42,7 +42,7 @@ bool excesoDeVelocidad(viaje v) {
     ordenarViaje(v);
     bool resp = false;
     // codigo
-    for (int i = 0; i < v.size(); i++){
+    for (int i = 1; i < v.size(); i++){
         if (velocidad(v[i-1], v[i]) > 80 ){
             return true;
         }
@@ -58,8 +58,8 @@ int main(){
     const double unaHora = 3600;
 
     viaje v = {medicion(0.0, P),
-               medicion(unaHora, desviarPunto(P, 1000, 0)),
-               medicion(unaHora*2, desviarPunto(P, 2000, 0))};
+               medicion(unaHora, desviarPunto(P, 100000, 0)),
+               medicion(unaHora*2, desviarPunto(P, 200000, 0))}; // 100 KM por hora.
 
     cout << excesoDeVelocidad(v) << endl;
 
