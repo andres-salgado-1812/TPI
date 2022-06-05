@@ -56,8 +56,8 @@ build CMakeFiles/Ejercicios.dir/auxiliares.cpp.obj: CXX_COMPILER__Ejercicios_Deb
   OBJECT_DIR = CMakeFiles\Ejercicios.dir
   OBJECT_FILE_DIR = CMakeFiles\Ejercicios.dir
 
-build CMakeFiles/Ejercicios.dir/ditanciaTotal.cpp.obj: CXX_COMPILER__Ejercicios_Debug C$:/Users/AFSP/Documents/University/Subjects/2º$ C/Algo$ I/TPI/Repo$ TPI/TPI/Ejercicios/ditanciaTotal.cpp || cmake_object_order_depends_target_Ejercicios
-  DEP_FILE = CMakeFiles\Ejercicios.dir\ditanciaTotal.cpp.obj.d
+build CMakeFiles/Ejercicios.dir/excesoDeVelocidad.cpp.obj: CXX_COMPILER__Ejercicios_Debug C$:/Users/AFSP/Documents/University/Subjects/2º$ C/Algo$ I/TPI/Repo$ TPI/TPI/Ejercicios/excesoDeVelocidad.cpp || cmake_object_order_depends_target_Ejercicios
+  DEP_FILE = CMakeFiles\Ejercicios.dir\excesoDeVelocidad.cpp.obj.d
   FLAGS = -g -std=gnu++14
   INCLUDES = -I"C:/Users/AFSP/Documents/University/Subjects/2º C/Algo I/TPI/Repo TPI/TPI/Ejercicios/."
   OBJECT_DIR = CMakeFiles\Ejercicios.dir
@@ -71,7 +71,7 @@ build CMakeFiles/Ejercicios.dir/ditanciaTotal.cpp.obj: CXX_COMPILER__Ejercicios_
 #############################################
 # Link the executable Ejercicios.exe
 
-build Ejercicios.exe: CXX_EXECUTABLE_LINKER__Ejercicios_Debug CMakeFiles/Ejercicios.dir/auxiliares.cpp.obj CMakeFiles/Ejercicios.dir/ditanciaTotal.cpp.obj
+build Ejercicios.exe: CXX_EXECUTABLE_LINKER__Ejercicios_Debug CMakeFiles/Ejercicios.dir/auxiliares.cpp.obj CMakeFiles/Ejercicios.dir/excesoDeVelocidad.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Ejercicios.dir

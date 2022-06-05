@@ -9,4 +9,4 @@ add_executable(Ejercicios
         auxiliares.cpp
         auxiliares.h
         definiciones.h
-        ditanciaTotal.cpp)
+        excesoDeVelocidad.cpp)
