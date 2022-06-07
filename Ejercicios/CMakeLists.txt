@@ -9,4 +9,4 @@ add_executable(Ejercicios
         auxiliares.cpp
         auxiliares.h
         definiciones.h
-        flota.cpp)
+        recorridoNoCubierto.cpp)

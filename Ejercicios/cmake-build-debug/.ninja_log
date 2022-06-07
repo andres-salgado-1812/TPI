@@ -1,14 +1,11 @@
 # ninja log v5
-621	814	6761498158663956	Ejercicios.exe	a2c9d6ab92ba2eff
+745	966	6761506844627850	Ejercicios.exe	9367b20eebd31400
 2	502	6761014314247869	CMakeFiles/Ejercicios.dir/tiempoTotal.cpp.obj	4637584a7f25815b
 1	800	6760888336687643	CMakeFiles/Ejercicios.dir/auxiliares.cpp.obj	ae90e48888cdebd1
 3	510	6761014063079963	CMakeFiles/Ejercicios.dir/distanciaTotal.cpp.obj	c872abdfb5a3c46e
-1	268	6761501002397194	build.ninja	f983d0b5620c1d35
+1	268	6762705501576766	build.ninja	f983d0b5620c1d35
 5	620	6761498156750302	CMakeFiles/Ejercicios.dir/excesoDeVelocidad.cpp.obj	f5b78e43116d328d
 3	655	6761051414659870	CMakeFiles/Ejercicios.dir/ditanciaTotal.cpp.obj	ed104db2c0be0a85
-4	909	6761505668232289	CMakeFiles/Ejercicios.dir/flota.cpp.obj	4d2217d9badac9f7
-910	1123	6761505670426861	Ejercicios.exe	9367b20eebd31400
-5	704	6761505794255247	CMakeFiles/Ejercicios.dir/flota.cpp.obj	4d2217d9badac9f7
-705	898	6761505796150704	Ejercicios.exe	9367b20eebd31400
 3	745	6761506842453620	CMakeFiles/Ejercicios.dir/flota.cpp.obj	4d2217d9badac9f7
-745	966	6761506844627850	Ejercicios.exe	9367b20eebd31400
+3	442	6762706254360109	CMakeFiles/Ejercicios.dir/recorridoNoCubierto.cpp.obj	fb4f80e66ce6e6e2
+443	1003	6762706259941727	Ejercicios.exe	756453de86a7c632
