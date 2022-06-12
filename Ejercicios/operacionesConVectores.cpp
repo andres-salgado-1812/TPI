@@ -5,11 +5,11 @@ using namespace std;
 #include "auxiliares.cpp"
 #include "definiciones.h"
 
-gps obtenerPuntoCorregido(gps p, gps q, float v_med){
+gps obtenerPuntoCorregido(gps p, gps q, float v_med, float desde){
   gps pq = restarGPS(q, p);
   gps pq_versor = multiplicarPorEscalar(pq, (1 / norma(pq)));
   gps pq_versor_escalado = multiplicarPorEscalar(pq_versor, v_med);
-  gps r = sumarGPS(q, pq_versor_escalado);
+  gps r = sumarGPS(desde, pq_versor_escalado);
   return r;
 }
 float norma(gps v){
