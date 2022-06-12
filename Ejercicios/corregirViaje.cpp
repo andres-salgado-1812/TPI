@@ -13,28 +13,26 @@ void corregirPunto(viaje& v, int k){
     tuple<tiempo, gps> puntoCorrecto2 = v[0];
     for(int i = 0; i < v.size(); i++){
         if(abs(obtenerTiempo(v[i]) - obtenerTiempo(v[k])) < abs(obtenerTiempo(puntoCorrecto1) - obtenerTiempo(v[k])) &&
-        (obtenerTiempo(v[i]) != obtenerTiempo(v[k]))){
+           (obtenerTiempo(v[i]) != obtenerTiempo(v[k]))){
             puntoCorrecto1 = v[i];
         }
     }
     for(int i = 0; i < v.size(); i++){
         if(abs(obtenerTiempo(v[i]) - obtenerTiempo(v[k])) < abs(obtenerTiempo(puntoCorrecto2) - obtenerTiempo(v[k])) && (obtenerTiempo(v[i]) != obtenerTiempo(puntoCorrecto1)) &&
-                                                                                                                                                  (obtenerTiempo(v[i]) != obtenerTiempo(v[k]))) {
+           (obtenerTiempo(v[i]) != obtenerTiempo(v[k]))) {
             puntoCorrecto2 = v[i];
         }
     }
     double v_media = ((distEnKM(obtenerPosicion(puntoCorrecto1), obtenerPosicion(puntoCorrecto2)))/1000)/(abs(obtenerTiempo(puntoCorrecto2)- obtenerTiempo(puntoCorrecto1)));
-    gps desde;
     //generarMedicion(obtenerTiempo(v[k]), obtenerPosicion(v[k]), obtenerPosicion(puntoCorrecto1), obtenerPosicion(puntoCorrecto2));
     if (obtenerTiempo(v[k]) < obtenerTiempo(puntoCorrecto1) && obtenerTiempo(v[k]) < obtenerTiempo(puntoCorrecto2)){
-        generarMedicion(obtenerTiempo(v[k]), obtenerPosicion(puntoCorrecto2) , obtenerPosicion(puntoCorrecto1), v_media, obtenerPosicion(puntoCorrecto2));
+        v[k] =  generarMedicion(obtenerTiempo(v[k]), obtenerPosicion(puntoCorrecto2) , obtenerPosicion(puntoCorrecto1), v_media, obtenerPosicion(puntoCorrecto2));
     }
     else if (obtenerTiempo(v[k]) > obtenerTiempo(puntoCorrecto1) && obtenerTiempo(v[k]) < obtenerTiempo(puntoCorrecto2)){
-        desde = obtenerPosicion(puntoCorrecto1);
-        generarMedicion(obtenerTiempo(v[k]),obtenerPosicion(puntoCorrecto1) , obtenerPosicion(puntoCorrecto2), v_media, obtenerPosicion(puntoCorrecto1));
+        v[k] = generarMedicion(obtenerTiempo(v[k]),obtenerPosicion(puntoCorrecto1) , obtenerPosicion(puntoCorrecto2), v_media, obtenerPosicion(puntoCorrecto1));
     }
-    else(obtenerTiempo(v[k]) > obtenerTiempo(puntoCorrecto1) && obtenerTiempo(v[k]) > obtenerTiempo(puntoCorrecto2)){
-        generarMedicion(obtenerTiempo(v[k]),obtenerPosicion(puntoCorrecto2) , obtenerPosicion(puntoCorrecto1), v_media, obtenerPosicion(puntoCorrecto1));
+    else if (obtenerTiempo(v[k]) > obtenerTiempo(puntoCorrecto1) && obtenerTiempo(v[k]) > obtenerTiempo(puntoCorrecto2)){
+        v[k] = generarMedicion(obtenerTiempo(v[k]),obtenerPosicion(puntoCorrecto2) , obtenerPosicion(puntoCorrecto1), v_media, obtenerPosicion(puntoCorrecto1));
     }
     //CORREGIR MEDIANTE ESTOS PUNTOS
 }
