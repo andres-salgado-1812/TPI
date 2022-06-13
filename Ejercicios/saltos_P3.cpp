@@ -13,14 +13,6 @@ bool contenidoEnCelda(tuple<tiempo, gps> medicion, celda cel){
   float long_esqSup_cel = obtenerLongitud(obtenerEsquinaSup(cel));
   float lat_esqInf_cel = obtenerLatitud(obtenerEsquinaInf(cel));
   float long_esqInf_cel = obtenerLongitud(obtenerEsquinaInf(cel));
-  // return ((long_esqSup_cel <= long_med) && (long_med < long_esqInf_cel));
-  //cout << long_esqSup_cel << " <=" << long_med << " <= " << long_esqInf_cel << endl;
-  //bool decidir = ((long_esqSup_cel <= long_med) && (long_med <= long_esqInf_cel));
-  bool decidir = (long_esqSup_cel <= long_med) && (long_esqInf_cel);
-  // cout << decidir << endl;
-  // cout << lat_esqInf_cel << ", " << lat_med << ", " << lat_esqSup_cel << endl;
-  // cout << (((long_esqSup_cel <= long_med) && (long_med <= long_esqInf_cel)) &&
-  //         ((lat_esqInf_cel <= lat_med) && (lat_med <= lat_esqSup_cel))) << endl;
   return ((long_esqSup_cel <= long_med) && (long_med <= long_esqInf_cel) &&
           (lat_esqInf_cel <= lat_med) && (lat_med <= lat_esqSup_cel));
 
