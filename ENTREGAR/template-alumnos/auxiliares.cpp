@@ -162,22 +162,7 @@ void ordenarViaje(viaje &v){
         swapVal( v, i, minInd);
     }
 }
-void swap2(tuple<tiempo, gps> &a, tuple<tiempo, gps> &b){
-    tuple<tiempo, gps> c = a;
-    a = b;
-    b = c;
-}
 
-viaje ordenarViaje2(viaje v){
-    for (int i = 0; i < v.size() - 1; i++) {
-        for (int j = i + 1; j < v.size(); j++) {
-            if (obtenerTiempo(v[j]) < obtenerTiempo(v[i])) {
-                swap2(v[i], v[j]);
-            }
-        }
-    }
-    return v;
-}
 double velocidad(tuple<tiempo, gps> medicion1,tuple<tiempo, gps> medicion2){
     distancia distanciaEntreV = distEnKM(obtenerPosicion(medicion1), obtenerPosicion(medicion2));
     tiempo tiempoEntreV = (obtenerTiempo(medicion2) - obtenerTiempo(medicion1))/3600;
